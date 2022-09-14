@@ -1,16 +1,10 @@
 <template >
-  <div>
-  <b-button>Button</b-button>
-  <b-button variant="danger">Button</b-button>
-  <b-button variant="success">Button</b-button>
-  <b-button variant="outline-primary">Button</b-button>
-</div>
     <h1>Counter- Vuex</h1>
     <h2>Direct Access Counter: {{$store.state.count}}</h2>
-
-    <button @click="increment">+1</button>
-    <button @click="incrementBy">+5</button> <!--a este boton se le pasaron parametros desde la mutacion -->
-    <button @click="randomInt">Random</button>
+    <b-button variant="success" @click="increment">+1</b-button>
+    <b-button variant="danger" @click="incrementBy">+5</b-button>   <!--a este boton se le pasaron parametros desde la mutacion -->
+    <b-button variant="warning" @click="randomInt">Random</b-button>  
+   
 
     <!-- <h1>mapState</h1> -->
     <h2>mapState: {{countComputed}}</h2>
@@ -23,7 +17,6 @@
  <script>
 
 import {mapState, mapActions} from 'vuex'
-
 
  export default {
 
